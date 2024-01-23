@@ -1,0 +1,50 @@
+.forms-general {
+    height: 20px;
+    position: relative;
+    width: 66px;
+}
+
+.forms-general .rectangle {
+    background-color: var(--f5f5fasoft-onlight);
+    border-radius: 4px;
+    height: 22px;
+    left: -1px;
+    position: absolute;
+    top: -1px;
+    width: 22px;
+}
+
+.forms-general .checkbox-title {
+    color: var(--x-5f-64-6dprimary);
+    font-family: var(--12px-bold-font-family);
+    font-size: var(--12px-bold-font-size);
+    font-style: var(--12px-bold-font-style);
+    font-weight: var(--12px-bold-font-weight);
+    letter-spacing: var(--12px-bold-letter-spacing);
+    line-height: var(--12px-bold-line-height);
+    white-space: nowrap;
+}
+
+.rectangle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+}
+
+.rectangle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.rectangle.checked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
